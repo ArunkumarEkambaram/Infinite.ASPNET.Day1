@@ -31,10 +31,18 @@ namespace Infinite.ASPNET.Day1
                 Response.Cookies["Password"].Expires = DateTime.Now.AddDays(2);
             }
 
-            //Passing information usingf Query String
-            if (!String.IsNullOrWhiteSpace(TxtUserId.Text))
+            ////Passing information usingf Query String
+            //if (!String.IsNullOrWhiteSpace(TxtUserId.Text))
+            //{
+
+            //    Response.Redirect("HomePage.aspx?uid=" + TxtUserId.Text);
+            //}
+
+            //Implementing Session State
+            if (TxtUserId.Text == "admin" && TxtPassword.Text == "admin@123")
             {
-                Response.Redirect("HomePage.aspx?uid=" + TxtUserId.Text);
+                Session["UserId"] = TxtUserId.Text;
+                Response.Redirect("HomePage.aspx");
             }
         }
     }

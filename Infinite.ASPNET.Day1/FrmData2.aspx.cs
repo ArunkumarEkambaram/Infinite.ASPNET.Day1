@@ -14,17 +14,27 @@ namespace Infinite.ASPNET.Day1
     {
         protected void Page_Load(object sender, EventArgs e)
         {
-            if (!Page.IsPostBack)
+            if (Session["UserId"] != null)
             {
-               // Bind GridView
-                GridCustomer.DataSource = BindGrid();
-                GridCustomer.DataBind();
+                LblMessage.Text = "Welcome, " + Session["UserId"];
 
-                //Bind DropdownList
-                DdlCountries.DataSource = BindDropDown();
-                DdlCountries.DataTextField = "Country";
-                DdlCountries.DataValueField = "Country";
-                DdlCountries.DataBind();
+                if (!Page.IsPostBack)
+                {
+
+                    // Bind GridView
+                    GridCustomer.DataSource = BindGrid();
+                    GridCustomer.DataBind();
+
+                    //Bind DropdownList
+                    DdlCountries.DataSource = BindDropDown();
+                    DdlCountries.DataTextField = "Country";
+                    DdlCountries.DataValueField = "Country";
+                    DdlCountries.DataBind();
+                }
+            }
+            else
+            {
+                LblMessage.Text = "Welcome, Guest";
             }
         }
 
@@ -81,6 +91,15 @@ namespace Infinite.ASPNET.Day1
                     GridCustomer.DataSource = ds.Tables["CustomerWithCountry"];
                     GridCustomer.DataBind();
                 }
+            }
+        }
+
+        protected void BtnSignOut_Click(object sender, EventArgs e)
+        {
+            if (Session["UserId"] != null)
+            {
+                Session.Remove("UserId");
+                Response.Redirect("CookiesDemo.aspx");
             }
         }
     }

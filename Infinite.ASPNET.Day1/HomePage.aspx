@@ -13,6 +13,9 @@
             
             <asp:Label Text="" ID="LblMessage" runat="server" />
         </div>
+        <div>
+            <asp:Button Text="Go to Customer Page" ID="Btn1" OnClick="Btn1_Click" runat="server" />
+        </div>
     </form>
 </body>
 </html>

@@ -9,6 +9,12 @@
 </head>
 <body class="m-3">
     <form id="form1" runat="server">
+        <div class="h2">
+            <asp:Label Text="" ID="LblMessage" runat="server" />
+           
+        </div>
+         <asp:Button Text="Sign Out" ID="BtnSignOut" OnClick="BtnSignOut_Click" runat="server" />
+
         <div>
             <div class="row">
                 <div class="col-md-3"></div>

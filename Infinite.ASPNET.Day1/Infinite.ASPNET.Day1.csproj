@@ -101,6 +101,7 @@
     <Content Include="Scripts\bootstrap.esm.min.js" />
     <Content Include="Scripts\bootstrap.js" />
     <Content Include="Scripts\bootstrap.min.js" />
+    <Content Include="SessionExample.aspx" />
     <Content Include="ViewStateDemo.aspx" />
     <Content Include="Web.config" />
     <Content Include="WebForm1.aspx" />
@@ -176,6 +177,13 @@
       <DependentUpon>Index.aspx</DependentUpon>
     </Compile>
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="SessionExample.aspx.cs">
+      <DependentUpon>SessionExample.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="SessionExample.aspx.designer.cs">
+      <DependentUpon>SessionExample.aspx</DependentUpon>
+    </Compile>
     <Compile Include="Site1.Master.cs">
       <DependentUpon>Site1.Master</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>

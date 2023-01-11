@@ -11,11 +11,26 @@ namespace Infinite.ASPNET.Day1
     {
         protected void Page_Load(object sender, EventArgs e)
         {
-            //Read data from Query String
-            if (Request.QueryString["uid"] != null)
+            ////Read data from Query String
+            //if (Request.QueryString["uid"] != null)
+            //{
+            //    LblMessage.Text = $"Hi, {Request.QueryString["uid"]}";
+            //}
+
+            //Session State
+            if (Session["UserId"] != null)
             {
-                LblMessage.Text = $"Hi, {Request.QueryString["uid"]}";
+                LblMessage.Text = $"Welcome, {Session["UserId"]}";
             }
+            else
+            {
+                LblMessage.Text = "Welcome, Guest";
+            }
+        }
+
+        protected void Btn1_Click(object sender, EventArgs e)
+        {
+            Response.Redirect("FrmData2.aspx");
         }
     }
 }
