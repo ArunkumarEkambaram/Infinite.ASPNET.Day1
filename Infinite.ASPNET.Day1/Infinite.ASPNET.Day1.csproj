@@ -84,12 +84,14 @@
     <Content Include="Content\bootstrap.min.css" />
     <Content Include="Content\bootstrap.rtl.css" />
     <Content Include="Content\bootstrap.rtl.min.css" />
+    <Content Include="CookiesDemo.aspx" />
     <Content Include="FrmData1.aspx" />
     <Content Include="FrmData2.aspx" />
     <Content Include="FrmDemo2.aspx" />
     <Content Include="FrmRegistration.aspx" />
     <Content Include="FrmSamplePage.aspx" />
     <Content Include="Global.asax" />
+    <Content Include="HiddenFieldDemo.aspx" />
     <Content Include="HomePage.aspx" />
     <Content Include="Images\sun.png" />
     <Content Include="Index.aspx" />
@@ -99,6 +101,7 @@
     <Content Include="Scripts\bootstrap.esm.min.js" />
     <Content Include="Scripts\bootstrap.js" />
     <Content Include="Scripts\bootstrap.min.js" />
+    <Content Include="ViewStateDemo.aspx" />
     <Content Include="Web.config" />
     <Content Include="WebForm1.aspx" />
   </ItemGroup>
@@ -109,6 +112,13 @@
     </Compile>
     <Compile Include="ChildPage1.aspx.designer.cs">
       <DependentUpon>ChildPage1.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="CookiesDemo.aspx.cs">
+      <DependentUpon>CookiesDemo.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="CookiesDemo.aspx.designer.cs">
+      <DependentUpon>CookiesDemo.aspx</DependentUpon>
     </Compile>
     <Compile Include="FrmData1.aspx.cs">
       <DependentUpon>FrmData1.aspx</DependentUpon>
@@ -144,6 +154,13 @@
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
     </Compile>
+    <Compile Include="HiddenFieldDemo.aspx.cs">
+      <DependentUpon>HiddenFieldDemo.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="HiddenFieldDemo.aspx.designer.cs">
+      <DependentUpon>HiddenFieldDemo.aspx</DependentUpon>
+    </Compile>
     <Compile Include="HomePage.aspx.cs">
       <DependentUpon>HomePage.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
@@ -165,6 +182,13 @@
     </Compile>
     <Compile Include="Site1.Master.designer.cs">
       <DependentUpon>Site1.Master</DependentUpon>
+    </Compile>
+    <Compile Include="ViewStateDemo.aspx.cs">
+      <DependentUpon>ViewStateDemo.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="ViewStateDemo.aspx.designer.cs">
+      <DependentUpon>ViewStateDemo.aspx</DependentUpon>
     </Compile>
     <Compile Include="WebForm1.aspx.cs">
       <DependentUpon>WebForm1.aspx</DependentUpon>

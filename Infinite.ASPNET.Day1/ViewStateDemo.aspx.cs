@@ -7,15 +7,17 @@ using System.Web.UI.WebControls;
 
 namespace Infinite.ASPNET.Day1
 {
-    public partial class HomePage : System.Web.UI.Page
+    public partial class ViewStateDemo : System.Web.UI.Page
     {
         protected void Page_Load(object sender, EventArgs e)
         {
-            //Read data from Query String
-            if (Request.QueryString["uid"] != null)
-            {
-                LblMessage.Text = $"Hi, {Request.QueryString["uid"]}";
-            }
+
+        }
+
+        protected void BtnChange_Click(object sender, EventArgs e)
+        {
+            Lbl1.Text = "Good Morning";
+            Lbl2.Text = "Hello World!!!";
         }
     }
 }

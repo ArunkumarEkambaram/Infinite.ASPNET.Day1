@@ -25,7 +25,7 @@
                 <div class="mb-2 row">
                     <label class="form-label col-md-4">First Name</label>
                     <div class="col-md-8">
-                        <asp:TextBox ID="TxtFirstName" runat="server" CssClass="form-control" />
+                        <asp:TextBox ID="TxtFirstName" runat="server" EnableViewState="false" CssClass="form-control" />
                         <asp:RequiredFieldValidator SetFocusOnError="true" Display="Dynamic" Text="*" ForeColor="Red" ID="RfvFirstName" runat="server" ControlToValidate="TxtFirstName" ErrorMessage="Please enter first name" />
                     </div>
                 </div>
@@ -83,8 +83,7 @@
                             <asp:ListItem Text="Soft Drinks" />
                             <asp:ListItem Text="Chocolate Coffee" />
                         </asp:CheckBoxList>
-                        <asp:CustomValidator Display="Dynamic" ID="CvBeverages" runat="server" ForeColor="Red" ErrorMessage="Please select any one item"
-                            ClientValidationFunction="checkItems"
+                        <asp:CustomValidator Display="Dynamic" ID="CvBeverages" runat="server" ForeColor="Red" ErrorMessage="Please select any one item"                            
                             OnServerValidate="CvBeverages_ServerValidate"></asp:CustomValidator>
                     </div>
                 </div>

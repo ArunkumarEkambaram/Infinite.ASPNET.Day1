@@ -10,7 +10,8 @@
     <form id="form1" runat="server">
         <div>
             <h1>Welcome to Home Page</h1>
-            <h1>Welcome to Home Page</h1>
+            
+            <asp:Label Text="" ID="LblMessage" runat="server" />
         </div>
     </form>
 </body>
